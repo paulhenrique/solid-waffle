@@ -1,5 +1,5 @@
-import Providers from "../Providers";
-import Router from "../Router";
+import Providers from "../providers";
+import Router from "../router";
 import { CssBaseline } from "@mui/material";
 
 const App = () => {
