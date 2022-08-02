@@ -14,3 +14,9 @@ test('Should subtract a and b correctly', () => {
   const sumResult = subtract(15, 2)
   expect(sumResult).not.toBe(3);
 });
+
+
+test('Should subtract a and b correctly', () => {
+  const sumResult = subtract(15, 2)
+  expect(sumResult).toBe(13);
+});
