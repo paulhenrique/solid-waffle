@@ -1,9 +1,10 @@
 import Providers from "../Providers";
+import Router from "../Router";
 
 const App = () => {
   return (
     <Providers>
-      <div>App</div>
+      <Router />
     </Providers>
   );
 };
