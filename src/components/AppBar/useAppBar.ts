@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux";
 import { changeRoute } from "../../store/features/routerReducer";
-import { doLogout } from "../../store/features/userReducer";
 import { useState } from "react";
 
 /**
@@ -20,18 +19,12 @@ const useAppBar = () => {
     setAnchorEl(null);
   };
 
-  const logout = () => {
-    dispatch(doLogout());
-    handleClose();
-  };
-
   return  {
     changeRouteDispatch,
     handleClick,
     anchorEl,
     open,
-    handleClose,
-    logout,
+    handleClose
   }
   
 }

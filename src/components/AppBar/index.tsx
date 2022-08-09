@@ -11,16 +11,11 @@ import {
   MenuItem,
 } from "@mui/material";
 import useAppBar from "./useAppBar";
+import { Link } from "react-router-dom";
+import { routesPath } from "../../router/ROUTES";
 
 export default function AppBar() {
-  const {
-    changeRouteDispatch,
-    handleClick,
-    anchorEl,
-    open,
-    handleClose,
-    logout,
-  } = useAppBar();
+  const { handleClick, anchorEl, open, handleClose } = useAppBar();
 
   return (
     <Box sx={{ flexGrow: 1 }} mb="79px">
@@ -28,7 +23,7 @@ export default function AppBar() {
         <Container>
           <Toolbar>
             <Box sx={{ flexGrow: 1 }}>
-              <Button color="inherit" onClick={() => changeRouteDispatch("/")}>
+              <Button color="inherit" component={Link} to={routesPath.home}>
                 MensApp
               </Button>
             </Box>
@@ -45,7 +40,12 @@ export default function AppBar() {
               onClose={handleClose}
               TransitionComponent={Fade}
             >
-              <MenuItem onClick={() => logout()}>Logout</MenuItem>
+              <MenuItem component={Link} to={routesPath.settings}>
+                Início
+              </MenuItem>
+              <MenuItem component={Link} to={routesPath.settings}>
+                Configurações
+              </MenuItem>
             </Menu>
           </Toolbar>
         </Container>
