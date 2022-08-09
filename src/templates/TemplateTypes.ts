@@ -1,3 +1,4 @@
 export const TemplateTypes = {
-  default: 'DefaultTemplate'
+  default: 'DefaultTemplate',
+  settings: 'SettingsTemplate',
 }
