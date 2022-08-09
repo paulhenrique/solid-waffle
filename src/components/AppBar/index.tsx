@@ -40,7 +40,7 @@ export default function AppBar() {
               onClose={handleClose}
               TransitionComponent={Fade}
             >
-              <MenuItem component={Link} to={routesPath.settings}>
+              <MenuItem component={Link} to={routesPath.home}>
                 Início
               </MenuItem>
               <MenuItem component={Link} to={routesPath.settings}>
